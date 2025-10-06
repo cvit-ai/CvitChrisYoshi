@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Month Anniversary</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            padding: 20px;
+            background-color: rgba(27, 25, 25, 0.7);
+            border-radius: 15px;
+            box-shadow: 1px  1px  15px rgba(226, 205, 10, 0.925);
+           
+        }
+        
+        h1 {
+            color: #ffef0e;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+            margin-bottom: 10px;
+        }
+      
+        .love-message {
+            font-size: 2em;
+            color: #ffe058;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+          
+        .commitment {
+            font-size: 1.3em;
+            color: #ffe058;
+            margin-top: 20px;
+           
+        }
+        @media (max-width:470px){
+            .container{
+                margin: 0px 15px;
+            }
+            h1{
+                font-size: 20px;
+                
+            }
+            .love-message{
+                font-size: 18px;
+                padding: 0px 10px;
+            }
+            .commitment {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .photo-frame {
+            width: 150px;
+            height: 150px;
+            border: 5px solid #f8bbd0;
+            border-radius: 50%;
+            margin: 20px auto;
+            overflow: hidden;
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3em;
+            color: #e91e63;
+            filter: drop-shadow(3px 2px 10px yellow);
+            z-index: -1;
+        }
+        span{
+            color: rgb(243, 207, 89);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <audio controls autoplay style="display: none">
+            <source src="./song.mp3" type="audio/mp3" >
+                Your browser does not support the audio element.
+        </audio>
+
+       
+
+        <h1>ပျော်ရွှင်စရာ သီတင်းကျွတ်လေး ဖြစ်ပါစေ</h1>
+        
+        <div class="photo-frame "><img src="https://i.pinimg.com/1200x/5d/fa/b6/5dfab6ae4ed20e3cd3f23c89b6144ecd.jpg" style="width: 150px; height: 150px; " alt="">
+              </div>
+        
+        <div class="love-message">🙏🙏သီတင်းကျွတ်မှစ၍ ချစ်ရသူတွေနဲ့အတူ ကိုယ်စိတ်နှစ်ဖြာ ကျန်းမာချမ်းသာကြပါစေဗျ🙏🙏</div>
+        
+        <div class="commitment">
+            အနာဂတ်မှာလည်း ထွန်းလင်းတောက်ပမယ့် ကြယ်ပွင့်လေး ဖြစ်နိုင်ပါစေ -- 
+        </div>
+        <span>🪔🪔 ꧁༒☬C-VIT☬༒꧂ 🪔🪔</span>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '🪔';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+        
+        // Create initial hearts
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createHeart, i * 200);
+        }
+        
+        // Continue creating hearts
+        setInterval(createHeart, 600);
+        
+        // Add occasional big hearts
+        setInterval(() => {
+            const bigHeart = document.createElement('div');
+            bigHeart.classList.add('heart');
+            bigHeart.innerHTML = '🎇';
+            bigHeart.style.left = Math.random() * 100 + 'vw';
+            bigHeart.style.animationDuration = '8s';
+            bigHeart.style.fontSize = '60px';
+            document.body.appendChild(bigHeart);
+            
+            setTimeout(() => {
+                bigHeart.remove();
+            }, 8000);
+        }, 1000);
+
+
+         function createHeart() {
+            const heart = document.createElement('span');
+            heart.classList.add('heart');
+            heart.innerHTML = '🪔';
+             heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.bottom = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 6000);
+        }
+        
+        // Create initial hearts
+        for (let i = 0; i < 15; i++) {
+            setTimeout(createHeart, i * 200);
+        }
+        
+    </script>
+</body>
+</html>
